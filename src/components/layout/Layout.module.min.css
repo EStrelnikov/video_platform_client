@@ -1,0 +1,18 @@
+@reference '../../app/globals.css'
+
+.hidedSidebar > aside {
+	animation: hideSidebar 0.35s forwards;
+	flex-grow: 0;
+}
+.hidedSidebar > aside > nav > div:first-child {
+	transition-property: opacity;
+	transition-timing-function: var(--default-transition-timing-function);
+	transition-duration: var(--default-transition-duration);
+	opacity: 0;
+}
+.showedSidebar > div {
+	width: 100%;
+}
+.showedSidebar > aside {
+	animation: showSidebar 0.3s forwards;
+}

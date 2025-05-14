@@ -1,6 +1,9 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+	sassOptions: {
+		additionalData: `$var: red;`
+	},
 	reactStrictMode: true,
 	poweredByHeader: false,
 	async rewrites() {

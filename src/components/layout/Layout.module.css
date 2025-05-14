@@ -1,0 +1,56 @@
+@reference '../../app/globals.css';
+
+.sidebarContainer {
+	display: flex;
+	min-height: 100vh;
+}
+
+.sidebarWrapper {
+	position: relative;
+}
+
+@keyframes showSidebar {
+	from {
+		width: 60px;
+	}
+	to {
+		width: 213px;
+	}
+}
+
+@keyframes hideSidebar {
+	from {
+		width: 213px;
+	}
+	to {
+		width: 60px;
+	}
+}
+
+.showedSidebar {
+	animation: showSidebar 0.35s forwards;
+}
+
+.hidedSidebar {
+	animation: hideSidebar 0.35s forwards;
+}
+
+.showedSidebar .sidebarContent {
+	opacity: 1;
+	transition: opacity 0.35s ease;
+}
+
+.hidedSidebar .sidebarContent {
+	opacity: 0;
+	transition: opacity 0.35s ease;
+}
+
+.showedSidebar > aside > nav > div:first-child {
+	opacity: 1;
+	transition: opacity 333ms ease-in-out;
+}
+
+.hidedSidebar > aside > nav > div:first-child {
+	opacity: 0;
+	transition: opacity 333ms ease-in-out;
+}
